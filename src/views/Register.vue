@@ -63,7 +63,7 @@ export default {
   methods: {
     onSubmit() {
       console.log('onSubmit Register');
-      this.$store.commit('registerStart');
+      this.$store.dispatch('register');
     },
   },
 };
