@@ -30,7 +30,11 @@
                 placeholder="Password"
               />
             </fieldset>
-            <button class="btn btn-lg btn-primary pull-xs-right" type="submit">
+            <button
+              class="btn btn-lg btn-primary pull-xs-right"
+              type="submit"
+              :disabled="isSubmitting"
+            >
               Sign Up
             </button>
           </form>
@@ -50,9 +54,16 @@ export default {
   data() {
     return {};
   },
+  computed: {
+    isSubmitting() {
+      return this.$store.state.auth.isSubmitting;
+    },
+  },
+
   methods: {
     onSubmit() {
       console.log('onSubmit Register');
+      this.$store.commit('registerStart');
     },
   },
 };
