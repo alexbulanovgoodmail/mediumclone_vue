@@ -14,6 +14,7 @@
                 class="form-control form-control-lg"
                 type="text"
                 placeholder="Username"
+                v-model="username"
               />
             </fieldset>
             <fieldset class="form-group">
@@ -21,6 +22,7 @@
                 class="form-control form-control-lg"
                 type="text"
                 placeholder="Email"
+                v-model="email"
               />
             </fieldset>
             <fieldset class="form-group">
@@ -28,6 +30,7 @@
                 class="form-control form-control-lg"
                 type="password"
                 placeholder="Password"
+                v-model="password"
               />
             </fieldset>
             <button
@@ -52,7 +55,11 @@ export default {
   props: {},
   components: {},
   data() {
-    return {};
+    return {
+      username: '',
+      email: '',
+      password: '',
+    };
   },
   computed: {
     isSubmitting() {
@@ -65,12 +72,13 @@ export default {
       console.log('onSubmit Register');
       this.$store
         .dispatch('register', {
-          username: 'hoho666',
-          email: 'hoho666@ya.ru',
-          password: '12345678',
+          username: this.username,
+          email: this.email,
+          password: this.password,
         })
         .then((user) => {
           console.log('successfully register user', user);
+          this.$router.push({name: 'home'});
         });
     },
   },
