@@ -52,7 +52,7 @@
 
 <script>
 // @ is an alias to /src
-
+import {actionTypes} from '@/store/modules/auth';
 import McvValidationErrors from '@/components/ValidationErrors';
 export default {
   name: 'McvRegister',
@@ -80,7 +80,7 @@ export default {
     onSubmit() {
       console.log('onSubmit Register');
       this.$store
-        .dispatch('register', {
+        .dispatch(actionTypes.register, {
           username: this.username,
           email: this.email,
           password: this.password,
