@@ -11,11 +11,6 @@ const routes = [
     component: Home,
   },
   {
-    path: '/',
-    name: 'globalFeed',
-    component: McvGlobalFeed,
-  },
-  {
     path: '/login',
     name: 'login',
     component: Login,
@@ -24,6 +19,51 @@ const routes = [
     path: '/register',
     name: 'register',
     component: Register,
+  },
+  {
+    path: '/',
+    name: 'globalFeed',
+    component: McvGlobalFeed,
+  },
+  {
+    path: '/feed',
+    name: 'yourFeed',
+    component: McvGlobalFeed,
+  },
+  {
+    path: '/tags/:slug',
+    name: 'tag',
+    component: McvGlobalFeed,
+  },
+  {
+    path: '/article/new',
+    name: 'createArticle',
+    component: McvGlobalFeed,
+  },
+  {
+    path: '/article/:slug',
+    name: 'article',
+    component: McvGlobalFeed,
+  },
+  {
+    path: '/article/:slug/edit',
+    name: 'editArticle',
+    component: McvGlobalFeed,
+  },
+  {
+    path: '/settings',
+    name: 'settings',
+    component: McvGlobalFeed,
+  },
+  {
+    path: '/profiles/:slug',
+    name: 'userProfile',
+    component: McvGlobalFeed,
+  },
+  {
+    path: '/profiles/:slug/favorites',
+    name: 'userProfileFavorites',
+    component: McvGlobalFeed,
   },
 ];
 
