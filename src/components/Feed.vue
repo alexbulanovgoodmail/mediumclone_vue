@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <mcv-loading v-if="isLoading" />
     <mcv-error-message v-if="error" :message="'Something bad happened.'" />
     <div v-if="feed">
