@@ -1,6 +1,8 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
 import Home from '@/views/Home';
 import McvGlobalFeed from '@/views/GlobalFeed';
+import McvYourFeed from '@/views/YourFeed';
+import McvTagFeed from '@/views/TagFeed';
 import Login from '@/views/Login';
 import Register from '@/views/Register';
 
@@ -28,12 +30,12 @@ const routes = [
   {
     path: '/feed',
     name: 'yourFeed',
-    component: McvGlobalFeed,
+    component: McvYourFeed,
   },
   {
     path: '/tags/:slug',
     name: 'tag',
-    component: McvGlobalFeed,
+    component: McvTagFeed,
   },
   {
     path: '/article/new',
