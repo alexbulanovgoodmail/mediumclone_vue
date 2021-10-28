@@ -3,6 +3,7 @@ import Home from '@/views/Home';
 import McvGlobalFeed from '@/views/GlobalFeed';
 import McvYourFeed from '@/views/YourFeed';
 import McvTagFeed from '@/views/TagFeed';
+import McvArticle from '@/views/Article';
 import Login from '@/views/Login';
 import Register from '@/views/Register';
 
@@ -45,7 +46,7 @@ const routes = [
   {
     path: '/article/:slug',
     name: 'article',
-    component: McvGlobalFeed,
+    component: McvArticle,
   },
   {
     path: '/article/:slug/edit',
