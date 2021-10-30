@@ -35,7 +35,7 @@
           <h1>{{ article.title }}</h1>
           <p>{{ article.description }}</p>
           <span>Read more...</span>
-          TAG LIST
+          <mcv-tag-list :tag-list="article.tagList" />
         </router-link>
       </div>
 
@@ -55,6 +55,7 @@ import {mapState} from 'vuex';
 import {actionTypes} from '@/store/modules/feed';
 import McvPagination from '@/components/Pagination';
 import McvErrorMessage from '@/components/ErrorMessage';
+import McvTagList from '@/components/TagList';
 import McvLoading from '@/components/Loading';
 import {stringify, parseUrl} from 'query-string';
 import {limit} from '@/helpers/vars';
@@ -74,6 +75,7 @@ export default {
   components: {
     McvPagination,
     McvLoading,
+    McvTagList,
     McvErrorMessage,
   },
   computed: {
