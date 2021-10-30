@@ -19,7 +19,7 @@
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{name: 'home'}"
+              :to="{name: 'createArticle'}"
               active-class="active"
             >
               <i class="ion-compose"></i> &nbsp; New Article
