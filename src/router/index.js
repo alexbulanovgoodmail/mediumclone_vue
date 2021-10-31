@@ -5,6 +5,7 @@ import McvYourFeed from '@/views/YourFeed';
 import McvTagFeed from '@/views/TagFeed';
 import McvArticle from '@/views/Article';
 import McvCreateArticle from '@/views/CreateArticle';
+import McvEditArticle from '@/views/EditArticle';
 import Login from '@/views/Login';
 import Register from '@/views/Register';
 
@@ -52,7 +53,7 @@ const routes = [
   {
     path: '/article/:slug/edit',
     name: 'editArticle',
-    component: McvGlobalFeed,
+    component: McvEditArticle,
   },
   {
     path: '/settings',
