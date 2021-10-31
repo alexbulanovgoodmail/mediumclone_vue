@@ -10,7 +10,7 @@
           class="tag-default tag-pill"
           v-for="popularTag in popularTags"
           :key="popularTag"
-          :to="{name: 'tag', params: '{slug: popularTag }'}"
+          :to="{name: 'tag', params: {slug: popularTag}}"
         >
           {{ popularTag }}
         </router-link>

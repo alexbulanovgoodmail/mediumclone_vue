@@ -1,17 +1,17 @@
 <template>
-  <div>
-    <mcv-article-form
-      :initial-values="initialValues"
-      :errors="validationErrors"
-      :is-submitting="isSubmitting"
-      @articleSubmit="onSubmit"
-    />
-  </div>
+  <mcv-article-form
+    :initial-values="initialValues"
+    :errors="validationErrors"
+    :is-submitting="isSubmitting"
+    @articleSubmit="onSubmit"
+  />
 </template>
 
 <script>
 // @ is an alias to /src
-import McvArticleForm from '@/components/ArticleForm'
+import {mapState} from 'vuex';
+import {actionTypes} from '@/store/modules/createArticle';
+import McvArticleForm from '@/components/ArticleForm';
 export default {
   name: 'McvCreateArticle',
   components: {
@@ -25,13 +25,21 @@ export default {
         body: '',
         tagList: [],
       },
-      validationErrors: null,
-      isSubmitting: false,
     };
   },
+  computed: {
+    ...mapState({
+      isSubmitting: (state) => state.createArticle.isSubmitting,
+      validationErrors: (state) => state.createArticle.validationErrors,
+    }),
+  },
   methods: {
-    onSubmit(data) {
-      console.log('onSubmit in create article: ', data);
+    onSubmit(articleInput) {
+      this.$store
+        .dispatch(actionTypes.createArticle, {articleInput})
+        .then((article) => {
+          this.$router.push({name: 'article', params: {slug: article.slug}});
+        });
     },
   },
 };
