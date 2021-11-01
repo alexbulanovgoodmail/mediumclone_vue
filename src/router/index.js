@@ -6,6 +6,7 @@ import McvTagFeed from '@/views/TagFeed';
 import McvArticle from '@/views/Article';
 import McvCreateArticle from '@/views/CreateArticle';
 import McvEditArticle from '@/views/EditArticle';
+import McvSettings from '@/views/Settings';
 import Login from '@/views/Login';
 import Register from '@/views/Register';
 
@@ -58,7 +59,7 @@ const routes = [
   {
     path: '/settings',
     name: 'settings',
-    component: McvGlobalFeed,
+    component: McvSettings,
   },
   {
     path: '/profiles/:slug',
