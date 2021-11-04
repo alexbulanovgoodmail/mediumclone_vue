@@ -7,6 +7,7 @@ import McvArticle from '@/views/Article';
 import McvCreateArticle from '@/views/CreateArticle';
 import McvEditArticle from '@/views/EditArticle';
 import McvSettings from '@/views/Settings';
+import McvUserProfile from '@/views/UserProfile';
 import Login from '@/views/Login';
 import Register from '@/views/Register';
 
@@ -64,12 +65,12 @@ const routes = [
   {
     path: '/profiles/:slug',
     name: 'userProfile',
-    component: McvGlobalFeed,
+    component: McvUserProfile,
   },
   {
     path: '/profiles/:slug/favorites',
     name: 'userProfileFavorites',
-    component: McvGlobalFeed,
+    component: McvUserProfile,
   },
 ];
 

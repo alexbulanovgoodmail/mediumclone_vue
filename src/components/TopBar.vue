@@ -33,7 +33,7 @@
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{name: 'home', params: currentUser.username}"
+              :to="{name: 'userProfile', params: {slug: currentUser.username}}"
               active-class="active"
             >
               <img class="user-pic" :src="currentUser.image" alt="" />

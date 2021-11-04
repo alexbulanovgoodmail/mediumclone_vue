@@ -109,6 +109,9 @@ export default {
     currentPage() {
       this.fetchFeed();
     },
+    apiUrl() {
+      this.fetchFeed();
+    },
   },
   methods: {
     fetchFeed() {
